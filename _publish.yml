@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 6469dc31-cbac-4222-8b5c-b95942b27267
+      url: 'https://tidyverse.netlify.app'
