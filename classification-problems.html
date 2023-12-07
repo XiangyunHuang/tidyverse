@@ -995,11 +995,11 @@ SV type: C-svc  (classification)
  parameter : cost C = 1 
 
 Gaussian Radial Basis kernel function. 
- Hyperparameter : sigma =  0.801654767587279 
+ Hyperparameter : sigma =  0.535230124769179 
 
-Number of Support Vectors : 59 
+Number of Support Vectors : 58 
 
-Objective Function Value : -4.533 -5.0463 -20.2992 
+Objective Function Value : -3.8203 -4.0268 -21.4091 
 Training error : 0.026667 </code></pre>
 </div>
 </div>
@@ -1049,20 +1049,20 @@ iris_knn     setosa versicolor virginica
 <div class="cell-output cell-output-stdout">
 <pre><code>a 4-4-3 network with 35 weights
 options were - softmax modelling 
-  b-&gt;h1  i1-&gt;h1  i2-&gt;h1  i3-&gt;h1  i4-&gt;h1 
-  51.45  -24.17 -110.11  107.84  -93.56 
-  b-&gt;h2  i1-&gt;h2  i2-&gt;h2  i3-&gt;h2  i4-&gt;h2 
- 678.85  133.47  165.09 -306.00 -288.67 
-  b-&gt;h3  i1-&gt;h3  i2-&gt;h3  i3-&gt;h3  i4-&gt;h3 
-  -4.37  -10.48  -23.05   32.16   17.56 
-  b-&gt;h4  i1-&gt;h4  i2-&gt;h4  i3-&gt;h4  i4-&gt;h4 
-  16.34   -2.23   32.38  -17.66    0.79 
-  b-&gt;o1  h1-&gt;o1  h2-&gt;o1  h3-&gt;o1  h4-&gt;o1 
-  89.24  -55.64   78.32 -171.75   -0.15 
-  b-&gt;o2  h1-&gt;o2  h2-&gt;o2  h3-&gt;o2  h4-&gt;o2 
--137.34   72.72  193.84  119.19   23.54 
-  b-&gt;o3  h1-&gt;o3  h2-&gt;o3  h3-&gt;o3  h4-&gt;o3 
-  47.70  -18.03 -271.70   53.51  -22.64 </code></pre>
+ b-&gt;h1 i1-&gt;h1 i2-&gt;h1 i3-&gt;h1 i4-&gt;h1 
+  8.20   4.68  43.98 -86.27 -38.53 
+ b-&gt;h2 i1-&gt;h2 i2-&gt;h2 i3-&gt;h2 i4-&gt;h2 
+  3.73  17.58  11.03   5.33   0.73 
+ b-&gt;h3 i1-&gt;h3 i2-&gt;h3 i3-&gt;h3 i4-&gt;h3 
+  3.85  14.80  12.17  -0.28  -1.25 
+ b-&gt;h4 i1-&gt;h4 i2-&gt;h4 i3-&gt;h4 i4-&gt;h4 
+  2.93  17.06   8.64  15.15   6.72 
+ b-&gt;o1 h1-&gt;o1 h2-&gt;o1 h3-&gt;o1 h4-&gt;o1 
+  3.23  57.50 -16.97   5.48 -11.69 
+ b-&gt;o2 h1-&gt;o2 h2-&gt;o2 h3-&gt;o2 h4-&gt;o2 
+ -3.41  -7.16   5.85  -2.49  10.07 
+ b-&gt;o3 h1-&gt;o3 h2-&gt;o3 h3-&gt;o3 h4-&gt;o3 
+ -0.41 -51.49  11.23  -2.60   1.80 </code></pre>
 </div>
 </div>
 <p>size 隐藏层中的神经元数量</p>
@@ -1073,8 +1073,8 @@ options were - softmax modelling
 <pre><code>              
 iris_pred_nnet setosa versicolor virginica
     setosa         50          0         0
-    versicolor      0         50         0
-    virginica       0          0        50</code></pre>
+    versicolor      0         26        28
+    virginica       0         24        22</code></pre>
 </div>
 </div>
 </section><section id="sec-recursive-partitioning" class="level2" data-number="40.8"><h2 data-number="40.8" class="anchored" data-anchor-id="sec-recursive-partitioning">
@@ -1194,12 +1194,12 @@ Call:
                      Number of trees: 500
 No. of variables tried at each split: 2
 
-        OOB estimate of  error rate: 5.33%
+        OOB estimate of  error rate: 4.67%
 Confusion matrix:
            setosa versicolor virginica class.error
 setosa         50          0         0        0.00
 versicolor      0         47         3        0.06
-virginica       0          5        45        0.10</code></pre>
+virginica       0          4        46        0.08</code></pre>
 </div>
 </div>
 <div class="cell">
