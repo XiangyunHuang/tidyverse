@@ -781,8 +781,8 @@ MathJax ={
 #&gt; VALIDATION: RMSEP
 #&gt; Cross-validated using 10 random segments.
 #&gt;        (Intercept)  1 comps  2 comps  3 comps  4 comps  5 comps  6 comps
-#&gt; CV           9.206    8.044    7.911    7.650    6.629    5.965    5.835
-#&gt; adjCV        9.206    8.042    7.912    7.647    6.624    5.955    5.828
+#&gt; CV           9.206    8.023    7.881    7.625    6.508    5.894    5.743
+#&gt; adjCV        9.206    8.021    7.882    7.623    6.503    5.889    5.740
 #&gt; 
 #&gt; TRAINING: % variance explained
 #&gt;       1 comps  2 comps  3 comps  4 comps  5 comps  6 comps
@@ -820,8 +820,8 @@ MathJax ={
 #&gt; VALIDATION: RMSEP
 #&gt; Cross-validated using 10 random segments.
 #&gt;        (Intercept)  1 comps  2 comps  3 comps  4 comps  5 comps  6 comps
-#&gt; CV           9.206    8.046    8.024    7.808    7.788    7.709    6.101
-#&gt; adjCV        9.206    8.045    8.022    7.805    7.785    7.729    6.092
+#&gt; CV           9.206    8.050    8.046    7.830    7.819    7.687    6.067
+#&gt; adjCV        9.206    8.049    8.044    7.826    7.815    7.703    6.060
 #&gt; 
 #&gt; TRAINING: % variance explained
 #&gt;       1 comps  2 comps  3 comps  4 comps  5 comps  6 comps
@@ -1639,12 +1639,12 @@ MathJax ={
 #&gt;  parameter : epsilon = 0.1  cost C = 1 
 #&gt; 
 #&gt; Gaussian Radial Basis kernel function. 
-#&gt;  Hyperparameter : sigma =  0.0934826272974689 
+#&gt;  Hyperparameter : sigma =  0.108812087925183 
 #&gt; 
-#&gt; Number of Support Vectors : 337 
+#&gt; Number of Support Vectors : 339 
 #&gt; 
-#&gt; Objective Function Value : -80.1704 
-#&gt; Training error : 0.100573</code></pre>
+#&gt; Objective Function Value : -79.3411 
+#&gt; Training error : 0.095339</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1653,7 +1653,7 @@ MathJax ={
 <span id="cb79-3"><a href="#cb79-3"></a><span class="co"># RMSE</span></span>
 <span id="cb79-4"><a href="#cb79-4"></a><span class="fu">rmse</span>(Boston<span class="sc">$</span>medv, pred_medv_svm)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 2.916706</code></pre>
+<pre><code>#&gt; [1] 2.839795</code></pre>
 </div>
 </div>
 </section><section id="sec-nnet-regression" class="level2" data-number="42.4"><h2 data-number="42.4" class="anchored" data-anchor-id="sec-nnet-regression">
@@ -1671,7 +1671,7 @@ MathJax ={
 <span id="cb81-9"><a href="#cb81-9"></a>pred_medv_nnet <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit_nnet, <span class="at">newdata =</span> Boston[, <span class="sc">-</span><span class="dv">14</span>], <span class="at">type =</span> <span class="st">"raw"</span>)</span>
 <span id="cb81-10"><a href="#cb81-10"></a><span class="fu">rmse</span>(Boston<span class="sc">$</span>medv, pred_medv_nnet)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 2.64283</code></pre>
+<pre><code>#&gt; [1] 2.549602</code></pre>
 </div>
 </div>
 </section><section id="sec-rpart-regression" class="level2" data-number="42.5"><h2 data-number="42.5" class="anchored" data-anchor-id="sec-rpart-regression">
@@ -1717,13 +1717,13 @@ MathJax ={
 #&gt;                      Number of trees: 500
 #&gt; No. of variables tried at each split: 4
 #&gt; 
-#&gt;           Mean of squared residuals: 9.894873
-#&gt;                     % Var explained: 88.28</code></pre>
+#&gt;           Mean of squared residuals: 9.995068
+#&gt;                     % Var explained: 88.16</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1"></a>pred_medv_rf <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit_rf, <span class="at">newdata =</span> Boston[, <span class="sc">-</span><span class="dv">14</span>])</span>
 <span id="cb88-2"><a href="#cb88-2"></a><span class="fu">rmse</span>(Boston<span class="sc">$</span>medv, pred_medv_rf)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 1.398226</code></pre>
+<pre><code>#&gt; [1] 1.396677</code></pre>
 </div>
 </div>
 </section><section id="sec-boosting-regression" class="level2" data-number="42.7"><h2 data-number="42.7" class="anchored" data-anchor-id="sec-boosting-regression">

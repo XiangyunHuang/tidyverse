@@ -998,11 +998,11 @@ SV type: C-svc  (classification)
  parameter : cost C = 1 
 
 Gaussian Radial Basis kernel function. 
- Hyperparameter : sigma =  0.742512270827347 
+ Hyperparameter : sigma =  0.720360056042607 
 
-Number of Support Vectors : 59 
+Number of Support Vectors : 58 
 
-Objective Function Value : -4.366 -4.8251 -20.4829 
+Objective Function Value : -4.3042 -4.7413 -20.5583 
 Training error : 0.026667 </code></pre>
 </div>
 </div>
@@ -1039,8 +1039,8 @@ iris_pred_svm setosa versicolor virginica
 <pre><code>            iris_species
 iris_knn     setosa versicolor virginica
   setosa         25          0         0
-  versicolor      0         23         3
-  virginica       0          2        22</code></pre>
+  versicolor      0         23         4
+  virginica       0          2        21</code></pre>
 </div>
 </div>
 </section><section id="sec-neural-networks" class="level2" data-number="40.7"><h2 data-number="40.7" class="anchored" data-anchor-id="sec-neural-networks">
@@ -1052,20 +1052,20 @@ iris_knn     setosa versicolor virginica
 <div class="cell-output cell-output-stdout">
 <pre><code>a 4-4-3 network with 35 weights
 options were - softmax modelling 
-  b-&gt;h1  i1-&gt;h1  i2-&gt;h1  i3-&gt;h1  i4-&gt;h1 
- -34.41  -24.85  -61.91  129.76   72.55 
-  b-&gt;h2  i1-&gt;h2  i2-&gt;h2  i3-&gt;h2  i4-&gt;h2 
-   1.88    6.37    4.59    1.78    0.08 
-  b-&gt;h3  i1-&gt;h3  i2-&gt;h3  i3-&gt;h3  i4-&gt;h3 
-   6.97    0.19    3.03    1.37  -12.49 
-  b-&gt;h4  i1-&gt;h4  i2-&gt;h4  i3-&gt;h4  i4-&gt;h4 
--693.35 -177.48 -175.84  375.37  276.83 
-  b-&gt;o1  h1-&gt;o1  h2-&gt;o1  h3-&gt;o1  h4-&gt;o1 
-  77.41 -258.51   77.38   -0.30  -10.01 
-  b-&gt;o2  h1-&gt;o2  h2-&gt;o2  h3-&gt;o2  h4-&gt;o2 
- -90.81  406.90  -91.97    4.99 -172.73 
-  b-&gt;o3  h1-&gt;o3  h2-&gt;o3  h3-&gt;o3  h4-&gt;o3 
-  14.11 -147.56   14.65   -5.30  182.43 </code></pre>
+ b-&gt;h1 i1-&gt;h1 i2-&gt;h1 i3-&gt;h1 i4-&gt;h1 
+  2.53   0.13   0.37  -0.52  -1.01 
+ b-&gt;h2 i1-&gt;h2 i2-&gt;h2 i3-&gt;h2 i4-&gt;h2 
+ -0.48  -1.22  -8.16   8.42   2.82 
+ b-&gt;h3 i1-&gt;h3 i2-&gt;h3 i3-&gt;h3 i4-&gt;h3 
+  3.83   9.72  14.07 -10.58  -6.78 
+ b-&gt;h4 i1-&gt;h4 i2-&gt;h4 i3-&gt;h4 i4-&gt;h4 
+ -2.27  -7.85  -5.32  -1.53   0.04 
+ b-&gt;o1 h1-&gt;o1 h2-&gt;o1 h3-&gt;o1 h4-&gt;o1 
+-20.01  74.57 -14.81 -27.57   1.66 
+ b-&gt;o2 h1-&gt;o2 h2-&gt;o2 h3-&gt;o2 h4-&gt;o2 
+  5.30  -0.43  -1.57   7.61  -0.09 
+ b-&gt;o3 h1-&gt;o3 h2-&gt;o3 h3-&gt;o3 h4-&gt;o3 
+ 14.55 -73.92  17.02  19.88  -1.52 </code></pre>
 </div>
 </div>
 <p>size 隐藏层中的神经元数量</p>
@@ -1076,8 +1076,8 @@ options were - softmax modelling
 <pre><code>              
 iris_pred_nnet setosa versicolor virginica
     setosa         50          0         0
-    versicolor      0         49         0
-    virginica       0          1        50</code></pre>
+    versicolor      0         49         1
+    virginica       0          1        49</code></pre>
 </div>
 </div>
 </section><section id="sec-recursive-partitioning" class="level2" data-number="40.8"><h2 data-number="40.8" class="anchored" data-anchor-id="sec-recursive-partitioning">
