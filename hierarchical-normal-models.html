@@ -753,7 +753,7 @@ y_j &amp;\sim \mathcal{N}(\theta_j,\sigma_j^2) \quad
 #&gt; theta[8]   8.59    0.18 7.84  -7.59   4.16   8.67  12.92  25.19  1936    1
 #&gt; lp__     -50.40    0.12 2.60 -55.92 -51.98 -50.14 -48.53 -46.08   499    1
 #&gt; 
-#&gt; Samples were drawn using NUTS(diag_e) at Fri Dec  8 12:10:39 2023.
+#&gt; Samples were drawn using NUTS(diag_e) at Sun Dec 10 02:37:35 2023.
 #&gt; For each parameter, n_eff is a crude measure of effective sample size,
 #&gt; and Rhat is the potential scale reduction factor on split chains (at 
 #&gt; convergence, Rhat=1).</code></pre>
@@ -770,7 +770,7 @@ y_j &amp;\sim \mathcal{N}(\theta_j,\sigma_j^2) \quad
 #&gt;     mean se_mean   sd 2.5% 97.5% n_eff Rhat
 #&gt; tau 6.69    0.21 5.52 0.25 20.81   688    1
 #&gt; 
-#&gt; Samples were drawn using NUTS(diag_e) at Fri Dec  8 12:10:39 2023.
+#&gt; Samples were drawn using NUTS(diag_e) at Sun Dec 10 02:37:35 2023.
 #&gt; For each parameter, n_eff is a crude measure of effective sample size,
 #&gt; and Rhat is the potential scale reduction factor on split chains (at 
 #&gt; convergence, Rhat=1).</code></pre>
@@ -788,21 +788,21 @@ y_j &amp;\sim \mathcal{N}(\theta_j,\sigma_j^2) \quad
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">str</span>(eight_schools_sim)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; List of 5
-#&gt;  $ mu   : num [1:2000(1d)] 7.74 13.77 11.77 4.5 7.36 ...
+#&gt;  $ mu   : num [1:2000(1d)] 10.3 15.2 13.9 10.1 11.4 ...
 #&gt;   ..- attr(*, "dimnames")=List of 1
 #&gt;   .. ..$ iterations: NULL
-#&gt;  $ tau  : num [1:2000(1d)] 2.217 23.572 0.673 4.157 10.179 ...
+#&gt;  $ tau  : num [1:2000(1d)] 3.93 7.63 7.08 4.74 0.3 ...
 #&gt;   ..- attr(*, "dimnames")=List of 1
 #&gt;   .. ..$ iterations: NULL
-#&gt;  $ eta  : num [1:2000, 1:8] -0.15419 -0.00787 -1.12186 0.93075 0.50096 ...
+#&gt;  $ eta  : num [1:2000, 1:8] 0.8793 0.1326 0.0701 -0.1683 1.0519 ...
 #&gt;   ..- attr(*, "dimnames")=List of 2
 #&gt;   .. ..$ iterations: NULL
 #&gt;   .. ..$           : NULL
-#&gt;  $ theta: num [1:2000, 1:8] 7.4 13.58 11.01 8.36 12.46 ...
+#&gt;  $ theta: num [1:2000, 1:8] 13.78 16.24 14.39 9.32 11.76 ...
 #&gt;   ..- attr(*, "dimnames")=List of 2
 #&gt;   .. ..$ iterations: NULL
 #&gt;   .. ..$           : NULL
-#&gt;  $ lp__ : num [1:2000(1d)] -49.5 -51 -52.6 -47.7 -46.6 ...
+#&gt;  $ lp__ : num [1:2000(1d)] -47.9 -53.2 -51.9 -49.4 -52.1 ...
 #&gt;   ..- attr(*, "dimnames")=List of 1
 #&gt;   .. ..$ iterations: NULL</code></pre>
 </div>
@@ -2238,7 +2238,7 @@ y_{nt} &amp;\sim \mathcal{N}(\alpha_n + \beta_n * (x_t - \bar{x}), \tau_c) \\
 #&gt; alpha0       106.4     0.1  3.5   99.4  104.0  106.4  108.7  113.4  2300    1
 #&gt; lp__        -438.6     0.3  6.6 -452.7 -442.9 -438.1 -434.1 -426.3   703    1
 #&gt; 
-#&gt; Samples were drawn using NUTS(diag_e) at Fri Dec  8 12:12:19 2023.
+#&gt; Samples were drawn using NUTS(diag_e) at Sun Dec 10 02:39:15 2023.
 #&gt; For each parameter, n_eff is a crude measure of effective sample size,
 #&gt; and Rhat is the potential scale reduction factor on split chains (at 
 #&gt; convergence, Rhat=1).</code></pre>
@@ -2651,10 +2651,10 @@ y_{nt} &amp;\sim \mathcal{N}(\alpha_n + \beta_n * (x_t - \bar{x}), \tau_c) \\
 #&gt; Model hyperparameters:
 #&gt;                                            mean     sd 0.025quant 0.5quant
 #&gt; Precision for the Gaussian observations 2414.80 311.28    1852.68  2397.51
-#&gt; Precision for rats                       888.43 244.92     495.43   858.84
+#&gt; Precision for rats                       888.43 244.91     495.43   858.84
 #&gt;                                         0.975quant    mode
 #&gt; Precision for the Gaussian observations    3076.02 2368.15
-#&gt; Precision for rats                         1451.78  804.50
+#&gt; Precision for rats                         1451.77  804.50
 #&gt; 
 #&gt;  is computed</code></pre>
 </div>
@@ -2680,14 +2680,14 @@ y_{nt} &amp;\sim \mathcal{N}(\alpha_n + \beta_n * (x_t - \bar{x}), \tau_c) \\
 #&gt; 
 #&gt; Model hyperparameters:
 #&gt;                                             mean      sd 0.025quant 0.5quant
-#&gt; Precision for the Gaussian observations 4522.632 666.550   3334.878 4480.317
+#&gt; Precision for the Gaussian observations 4522.626 666.542   3334.859 4480.320
 #&gt; Precision for rats (component 1)          32.097   7.956     18.939   31.260
-#&gt; Precision for rats (component 2)          33.234   8.227     19.603   32.377
+#&gt; Precision for rats (component 2)          33.234   8.227     19.604   32.377
 #&gt; Rho1:2 for rats                           -0.001   0.172     -0.335   -0.001
 #&gt;                                         0.975quant     mode
-#&gt; Precision for the Gaussian observations   5952.976 4407.837
-#&gt; Precision for rats (component 1)            50.049   29.770
-#&gt; Precision for rats (component 2)            51.773   30.859
+#&gt; Precision for the Gaussian observations   5952.926 4407.873
+#&gt; Precision for rats (component 1)            50.050   29.769
+#&gt; Precision for rats (component 2)            51.774   30.858
 #&gt; Rho1:2 for rats                              0.334   -0.001
 #&gt; 
 #&gt;  is computed</code></pre>
