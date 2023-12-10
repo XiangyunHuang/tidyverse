@@ -998,11 +998,11 @@ SV type: C-svc  (classification)
  parameter : cost C = 1 
 
 Gaussian Radial Basis kernel function. 
- Hyperparameter : sigma =  0.618849329260001 
+ Hyperparameter : sigma =  0.511141554855818 
 
-Number of Support Vectors : 59 
+Number of Support Vectors : 58 
 
-Objective Function Value : -4.0306 -4.3515 -20.9703 
+Objective Function Value : -3.7629 -3.9333 -21.5574 
 Training error : 0.026667 </code></pre>
 </div>
 </div>
@@ -1039,8 +1039,8 @@ iris_pred_svm setosa versicolor virginica
 <pre><code>            iris_species
 iris_knn     setosa versicolor virginica
   setosa         25          0         0
-  versicolor      0         23         4
-  virginica       0          2        21</code></pre>
+  versicolor      0         23         3
+  virginica       0          2        22</code></pre>
 </div>
 </div>
 </section><section id="sec-neural-networks" class="level2" data-number="40.7"><h2 data-number="40.7" class="anchored" data-anchor-id="sec-neural-networks">
@@ -1053,19 +1053,19 @@ iris_knn     setosa versicolor virginica
 <pre><code>a 4-4-3 network with 35 weights
 options were - softmax modelling 
   b-&gt;h1  i1-&gt;h1  i2-&gt;h1  i3-&gt;h1  i4-&gt;h1 
- -12.31  -63.04  -38.84  -22.21   -3.57 
+  20.37  209.84   60.71  282.17  121.51 
   b-&gt;h2  i1-&gt;h2  i2-&gt;h2  i3-&gt;h2  i4-&gt;h2 
-  39.31   50.47  147.93 -348.74 -205.92 
+ 119.14 -358.97   27.50  579.22  -89.42 
   b-&gt;h3  i1-&gt;h3  i2-&gt;h3  i3-&gt;h3  i4-&gt;h3 
-  25.06  208.75  737.34 -843.11 -329.95 
+ -26.87  -36.07  132.47  -66.56  -78.69 
   b-&gt;h4  i1-&gt;h4  i2-&gt;h4  i3-&gt;h4  i4-&gt;h4 
- 908.55  279.42  261.01 -550.18 -419.72 
+2247.37  142.80  306.96 -584.40 -694.43 
   b-&gt;o1  h1-&gt;o1  h2-&gt;o1  h3-&gt;o1  h4-&gt;o1 
--308.23  -34.55  372.92  245.95  324.46 
+-149.21   18.16 -538.35  559.01 -132.06 
   b-&gt;o2  h1-&gt;o2  h2-&gt;o2  h3-&gt;o2  h4-&gt;o2 
- 152.24    1.16 -175.46  -90.60  396.80 
+-166.43 -139.12  637.87 -605.96 1087.62 
   b-&gt;o3  h1-&gt;o3  h2-&gt;o3  h3-&gt;o3  h4-&gt;o3 
- 156.16   33.54 -197.89 -155.62 -720.74 </code></pre>
+ 316.92  120.39 -101.07   46.14 -957.00 </code></pre>
 </div>
 </div>
 <p>size 隐藏层中的神经元数量</p>
@@ -1197,12 +1197,12 @@ Call:
                      Number of trees: 500
 No. of variables tried at each split: 2
 
-        OOB estimate of  error rate: 4%
+        OOB estimate of  error rate: 4.67%
 Confusion matrix:
            setosa versicolor virginica class.error
 setosa         50          0         0        0.00
 versicolor      0         47         3        0.06
-virginica       0          3        47        0.06</code></pre>
+virginica       0          4        46        0.08</code></pre>
 </div>
 </div>
 <div class="cell">
