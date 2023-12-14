@@ -1027,7 +1027,7 @@ window.Quarto = {
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>nlp <span class="ot">&lt;-</span> <span class="fu">ROI_solve</span>(op, <span class="at">solver =</span> <span class="st">"nloptr.directL"</span>)</span>
 <span id="cb52-2"><a href="#cb52-2"></a>nlp<span class="sc">$</span>solution</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 63.934432  6.121382</code></pre>
+<pre><code>#&gt; [1] 63.934407  6.121375</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>nlp<span class="sc">$</span>objval</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1270,33 +1270,33 @@ Y \sim \left\{
 <span id="cb64-6"><a href="#cb64-6"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">maximize =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb64-7"><a href="#cb64-7"></a>)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; iter:  0  f-value:  -2270.3  pgrad:  3.924984 
-#&gt; iter:  10  f-value:  -1993.426  pgrad:  15.80403 
-#&gt; iter:  20  f-value:  -1990.998  pgrad:  2.24584 
-#&gt; iter:  30  f-value:  -1990.112  pgrad:  0.7731524 
-#&gt; iter:  40  f-value:  -1989.946  pgrad:  0.07023345 
-#&gt; iter:  50  f-value:  -1989.946  pgrad:  0.004558842 
+<pre><code>#&gt; iter:  0  f-value:  -2383.965  pgrad:  6.914033 
+#&gt; iter:  10  f-value:  -1990.461  pgrad:  2.973042 
+#&gt; iter:  20  f-value:  -1990.069  pgrad:  3.049843 
+#&gt; iter:  30  f-value:  -1989.946  pgrad:  0.4302069 
+#&gt; iter:  40  f-value:  -1989.946  pgrad:  0.001516582 
+#&gt; iter:  50  f-value:  -1989.946  pgrad:  2.955858e-05 
 #&gt;   Successful convergence.</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a>ans</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; $par
-#&gt; [1] 0.6401148 2.6634041 1.2560946
+#&gt; [1] 0.3598796 1.2560847 2.6633970
 #&gt; 
 #&gt; $value
 #&gt; [1] -1989.946
 #&gt; 
 #&gt; $gradient
-#&gt; [1] 3.183231e-05
+#&gt; [1] 0.0001318767
 #&gt; 
 #&gt; $fn.reduction
-#&gt; [1] -280.3537
+#&gt; [1] -394.0191
 #&gt; 
 #&gt; $iter
-#&gt; [1] 59
+#&gt; [1] 51
 #&gt; 
 #&gt; $feval
-#&gt; [1] 164
+#&gt; [1] 53
 #&gt; 
 #&gt; $convergence
 #&gt; [1] 0
@@ -1316,15 +1316,15 @@ Y \sim \left\{
 <span id="cb68-3"><a href="#cb68-3"></a>hess</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;           [,1]       [,2]       [,3]
-#&gt; [1,] -907.1077 -341.25285 -270.22932
-#&gt; [2,] -341.2529 -192.78092  -61.68208
-#&gt; [3,] -270.2293  -61.68208 -113.48021</code></pre>
+#&gt; [1,] -907.1147  270.22786  341.25633
+#&gt; [2,]  270.2279 -113.47827  -61.68163
+#&gt; [3,]  341.2563  -61.68163 -192.78398</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a><span class="co"># 标准差</span></span>
 <span id="cb70-2"><a href="#cb70-2"></a>se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fu">diag</span>(<span class="fu">solve</span>(<span class="sc">-</span>hess)))</span>
 <span id="cb70-3"><a href="#cb70-3"></a>se</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.1946846 0.2504785 0.3500304</code></pre>
+<pre><code>#&gt; [1] 0.1946827 0.3500320 0.2504751</code></pre>
 </div>
 </div>
 <p><code>multiStart</code> 从不同初始值出发寻找全局最大值，先找一系列局部极大值，通过比较获得全局最大值。</p>
@@ -1345,9 +1345,12 @@ Y \sim \left\{
 <span id="cb72-14"><a href="#cb72-14"></a>pmat[<span class="sc">!</span><span class="fu">duplicated</span>(pmat), ]</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;         fvalue parameter 1 parameter 2 parameter 3
-#&gt; [1,] -1989.946      0.6401      2.6634      1.2561
-#&gt; [2,] -1989.946      0.3599      1.2561      2.6634
-#&gt; [3,] -1989.946      0.3599      1.2560      2.6634</code></pre>
+#&gt; [1,] -1999.417      0.4373      2.3789      1.9753
+#&gt; [2,] -1989.946      0.6401      2.6634      1.2561
+#&gt; [3,] -1989.946      0.3599      1.2561      2.6634
+#&gt; [4,] -1996.754      0.5352      1.8538      2.4985
+#&gt; [5,] -2000.844      0.6032      2.0692      2.2811
+#&gt; [6,] -2000.986      0.8075      2.1076      2.3362</code></pre>
 </div>
 </div>
 </section><section id="sec-maximum-likelihood-estimation" class="level2" data-number="32.5"><h2 data-number="32.5" class="anchored" data-anchor-id="sec-maximum-likelihood-estimation">
