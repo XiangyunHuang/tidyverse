@@ -714,13 +714,13 @@ window.Quarto = {
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># 旅行线路方案</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="fu">as.integer</span>(tour_sol)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt;  [1]  5  4  6  1 10  7  2  3  9  8</code></pre>
+<pre><code>#&gt;  [1]  5  8  9  3  2  7 10  1  6  4</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">labels</span>(D_tsp)[<span class="fu">as.integer</span>(tour_sol)]</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt;  [1] "LosAngeles"    "Houston"       "Miami"         "Atlanta"      
-#&gt;  [5] "Washington.DC" "NewYork"       "Chicago"       "Denver"       
-#&gt;  [9] "Seattle"       "SanFrancisco"</code></pre>
+<pre><code>#&gt;  [1] "LosAngeles"    "SanFrancisco"  "Seattle"       "Denver"       
+#&gt;  [5] "Chicago"       "NewYork"       "Washington.DC" "Atlanta"      
+#&gt;  [9] "Miami"         "Houston"</code></pre>
 </div>
 </div>
 <p>求解结果对应的旅行方案，如 <a href="#fig-tsp-solution" class="quarto-xref">图&nbsp;<span>32.2</span></a> 所示，依次走过的城市是：洛杉矶、旧金山、西雅图、丹佛、芝加哥、纽约、华盛顿特区、亚特兰大、迈阿密、休斯顿。</p>
@@ -1270,33 +1270,34 @@ Y \sim \left\{
 <span id="cb64-6"><a href="#cb64-6"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">maximize =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb64-7"><a href="#cb64-7"></a>)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; iter:  0  f-value:  -3293.238  pgrad:  6.067833 
-#&gt; iter:  10  f-value:  -1990.951  pgrad:  1.678618 
-#&gt; iter:  20  f-value:  -1990.055  pgrad:  0.4560953 
-#&gt; iter:  30  f-value:  -1989.95  pgrad:  0.2147431 
-#&gt; iter:  40  f-value:  -1989.946  pgrad:  0.03243258 
-#&gt; iter:  50  f-value:  -1989.946  pgrad:  0.0001796252 
+<pre><code>#&gt; iter:  0  f-value:  -2411.503  pgrad:  7.528171 
+#&gt; iter:  10  f-value:  -1992.788  pgrad:  4.623466 
+#&gt; iter:  20  f-value:  -1992.11  pgrad:  3.045172 
+#&gt; iter:  30  f-value:  -1990.159  pgrad:  0.8554389 
+#&gt; iter:  40  f-value:  -1989.949  pgrad:  0.1212015 
+#&gt; iter:  50  f-value:  -1989.946  pgrad:  0.4781805 
+#&gt; iter:  60  f-value:  -1989.946  pgrad:  0.05438324 
 #&gt;   Successful convergence.</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a>ans</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; $par
-#&gt; [1] 0.3598826 1.2560900 2.6634011
+#&gt; [1] 0.3598827 1.2560903 2.6634011
 #&gt; 
 #&gt; $value
 #&gt; [1] -1989.946
 #&gt; 
 #&gt; $gradient
-#&gt; [1] 0.0001796252
+#&gt; [1] 9.094947e-06
 #&gt; 
 #&gt; $fn.reduction
-#&gt; [1] -1303.293
+#&gt; [1] -421.5575
 #&gt; 
 #&gt; $iter
-#&gt; [1] 50
+#&gt; [1] 69
 #&gt; 
 #&gt; $feval
-#&gt; [1] 52
+#&gt; [1] 71
 #&gt; 
 #&gt; $convergence
 #&gt; [1] 0
@@ -1316,15 +1317,15 @@ Y \sim \left\{
 <span id="cb68-3"><a href="#cb68-3"></a>hess</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;           [,1]       [,2]       [,3]
-#&gt; [1,] -907.1111  270.22861  341.25452
-#&gt; [2,]  270.2286 -113.47932  -61.68185
-#&gt; [3,]  341.2545  -61.68185 -192.78229</code></pre>
+#&gt; [1,] -907.1108  270.22855  341.25446
+#&gt; [2,]  270.2285 -113.47932  -61.68188
+#&gt; [3,]  341.2545  -61.68188 -192.78226</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a><span class="co"># 标准差</span></span>
 <span id="cb70-2"><a href="#cb70-2"></a>se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fu">diag</span>(<span class="fu">solve</span>(<span class="sc">-</span>hess)))</span>
 <span id="cb70-3"><a href="#cb70-3"></a>se</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.1946835 0.3500307 0.2504769</code></pre>
+<pre><code>#&gt; [1] 0.1946833 0.3500303 0.2504766</code></pre>
 </div>
 </div>
 <p><code>multiStart</code> 从不同初始值出发寻找全局最大值，先找一系列局部极大值，通过比较获得全局最大值。</p>
@@ -1347,7 +1348,8 @@ Y \sim \left\{
 <pre><code>#&gt;         fvalue parameter 1 parameter 2 parameter 3
 #&gt; [1,] -1989.946      0.3599      1.2561      2.6634
 #&gt; [2,] -1989.946      0.6401      2.6634      1.2561
-#&gt; [3,] -1997.071      0.7627      2.3170      1.6103</code></pre>
+#&gt; [3,] -1997.343      0.8298      2.0225      2.8507
+#&gt; [4,] -1995.979      0.2404      2.8107      1.9522</code></pre>
 </div>
 </div>
 </section><section id="sec-maximum-likelihood-estimation" class="level2" data-number="32.5"><h2 data-number="32.5" class="anchored" data-anchor-id="sec-maximum-likelihood-estimation">
