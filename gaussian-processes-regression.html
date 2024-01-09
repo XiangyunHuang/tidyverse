@@ -1606,7 +1606,7 @@ $num_max_treedepth
 [1] 0 0
 
 $ebfmi
-[1] 1.096103 1.065450</code></pre>
+[1] 1.051288 1.039679</code></pre>
 </div>
 </div>
 <p>参数的后验估计</p>
@@ -1616,9 +1616,9 @@ $ebfmi
 <pre><code># A tibble: 3 × 10
   variable   mean median     sd     mad     q5    q95  rhat ess_bulk ess_tail
   &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
-1 beta     1.77   1.79   0.145  0.120   1.53   1.97    1.00    1423.     647.
-2 sigma    0.638  0.610  0.116  0.0789  0.515  0.851   1.01     855.     474.
-3 phi      0.0271 0.0233 0.0152 0.00787 0.0141 0.0513  1.00     763.     539.</code></pre>
+1 beta     1.78   1.79   0.134  0.113   1.53   1.96    1.00    1667.     730.
+2 sigma    0.629  0.609  0.0957 0.0744  0.514  0.799   1.00    1075.     664.
+3 phi      0.0258 0.0232 0.0116 0.00740 0.0142 0.0455  1.00    1135.     790.</code></pre>
 </div>
 </div>
 <p>模型评估 LOO-CV</p>
@@ -1632,18 +1632,18 @@ $ebfmi
 Computed from 2000 by 157 log-likelihood matrix
 
          Estimate  SE
-elpd_loo   -933.7 3.9
-p_loo       119.2 2.8
-looic      1867.4 7.8
+elpd_loo   -937.4 4.1
+p_loo       122.6 2.9
+looic      1874.7 8.1
 ------
 Monte Carlo SE of elpd_loo is NA.
 
 Pareto k diagnostic values:
                          Count Pct.    Min. n_eff
-(-Inf, 0.5]   (good)       0    0.0%   &lt;NA&gt;      
- (0.5, 0.7]   (ok)        18   11.5%   58        
-   (0.7, 1]   (bad)      110   70.1%   8         
-   (1, Inf)   (very bad)  29   18.5%   5         
+(-Inf, 0.5]   (good)      1     0.6%   139       
+ (0.5, 0.7]   (ok)       17    10.8%   47        
+   (0.7, 1]   (bad)      97    61.8%   9         
+   (1, Inf)   (very bad) 42    26.8%   2         
 See help('pareto-k-diagnostic') for details.</code></pre>
 </div>
 </div>
@@ -1686,16 +1686,16 @@ Bounding box:  xmin: -6050 ymin: -3430 xmax: -50 ymax: 0
 CRS:           NA
 First 10 features:
    counts time            geometry    lambda yhat
-1      75  300 POINT (-6050 -3270) -1.220190   90
-2     371  300 POINT (-6050 -3165)  0.183427  361
-3    1931  300 POINT (-5925 -3320)  1.842720 1918
-4    4357  300 POINT (-5925 -3165)  2.670960 4370
-5    2114  300 POINT (-5800 -3350)  1.951680 2136
-6    2318  300 POINT (-5800 -3165)  2.053260 2324
-7    1975  300 POINT (-5625 -3350)  1.877460 2006
-8    1912  300 POINT (-5700 -3260)  1.857760 1940
-9    1902  300 POINT (-5700 -3220)  1.815000 1881
-10   1882  300 POINT (-5700 -3180)  1.840230 1837</code></pre>
+1      75  300 POINT (-6050 -3270) -1.237730  101
+2     371  300 POINT (-6050 -3165)  0.220766  377
+3    1931  300 POINT (-5925 -3320)  1.893470 1981
+4    4357  300 POINT (-5925 -3165)  2.672640 4440
+5    2114  300 POINT (-5800 -3350)  1.941360 2130
+6    2318  300 POINT (-5800 -3165)  2.047940 2281
+7    1975  300 POINT (-5625 -3350)  1.909690 2142
+8    1912  300 POINT (-5700 -3260)  1.865180 2001
+9    1902  300 POINT (-5700 -3220)  1.843020 1972
+10   1882  300 POINT (-5700 -3180)  1.833260 1861</code></pre>
 </div>
 </div>
 <p>观测值和预测值的情况</p>
@@ -1708,7 +1708,7 @@ First 10 features:
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a><span class="fu">summary</span>(rongelap_sf<span class="sc">$</span>yhat <span class="sc">/</span> rongelap_sf<span class="sc">$</span>time)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-  0.300   5.820   7.373   7.609   9.573  15.383 </code></pre>
+ 0.3367  5.9767  7.4633  7.6512  9.4633 15.6733 </code></pre>
 </div>
 </div>
 <p>展示采样点处的预测值</p>
@@ -1747,18 +1747,18 @@ First 10 features:
 <span id="cb66-5"><a href="#cb66-5"></a><span class="fu">head</span>(rongelap_grid_df)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         cX        cY time    ypred
-1 -5685.942 -3606.997  100 748.5820
-2 -5643.145 -3606.997  100 764.2190
-3 -5600.347 -3606.997  100 769.1420
-4 -5557.549 -3606.997  100 783.6340
-5 -5514.751 -3606.997  100 798.8565
-6 -5471.953 -3606.997  100 819.4740</code></pre>
+1 -5685.942 -3606.997  100 747.2570
+2 -5643.145 -3606.997  100 756.4695
+3 -5600.347 -3606.997  100 757.0890
+4 -5557.549 -3606.997  100 756.0145
+5 -5514.751 -3606.997  100 768.2680
+6 -5471.953 -3606.997  100 787.2340</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a><span class="co"># 预测值的分布范围</span></span>
 <span id="cb68-2"><a href="#cb68-2"></a><span class="fu">summary</span>(rongelap_grid_df<span class="sc">$</span>ypred <span class="sc">/</span> rongelap_grid_df<span class="sc">$</span>time)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-  0.495   6.194   7.411   7.311   8.531  12.806 </code></pre>
+ 0.4975  6.1924  7.4418  7.3105  8.6077 13.0225 </code></pre>
 </div>
 </div>
 <p>转化数据类型，去掉缓冲区内的预测位置，准备绘制辐射强度预测值的分布</p>
