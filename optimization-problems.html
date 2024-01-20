@@ -1270,33 +1270,34 @@ Y \sim \left\{
 <span id="cb64-6"><a href="#cb64-6"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">maximize =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb64-7"><a href="#cb64-7"></a>)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; iter:  0  f-value:  -2042.952  pgrad:  2.770026 
-#&gt; iter:  10  f-value:  -1991.8  pgrad:  2.479699 
-#&gt; iter:  20  f-value:  -1990.939  pgrad:  2.145839 
-#&gt; iter:  30  f-value:  -1990.293  pgrad:  1.372159 
-#&gt; iter:  40  f-value:  -1990.056  pgrad:  0.9161272 
-#&gt; iter:  50  f-value:  -1989.988  pgrad:  2.213665 
+<pre><code>#&gt; iter:  0  f-value:  -3227.067  pgrad:  7.101982 
+#&gt; iter:  10  f-value:  -1992.233  pgrad:  3.18171 
+#&gt; iter:  20  f-value:  -1991.297  pgrad:  2.550858 
+#&gt; iter:  30  f-value:  -1990.078  pgrad:  0.73092 
+#&gt; iter:  40  f-value:  -1989.947  pgrad:  0.3822197 
+#&gt; iter:  50  f-value:  -1989.946  pgrad:  0.003881269 
+#&gt; iter:  60  f-value:  -1989.946  pgrad:  0.0005070433 
 #&gt;   Successful convergence.</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a>ans</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; $par
-#&gt; [1] 0.359898 1.256118 2.663420
+#&gt; [1] 0.3598778 1.2560813 2.6633947
 #&gt; 
 #&gt; $value
 #&gt; [1] -1989.946
 #&gt; 
 #&gt; $gradient
-#&gt; [1] 0.0001864464
+#&gt; [1] 0.0001477929
 #&gt; 
 #&gt; $fn.reduction
-#&gt; [1] -53.00632
+#&gt; [1] -1237.122
 #&gt; 
 #&gt; $iter
-#&gt; [1] 59
+#&gt; [1] 67
 #&gt; 
 #&gt; $feval
-#&gt; [1] 165
+#&gt; [1] 69
 #&gt; 
 #&gt; $convergence
 #&gt; [1] 0
@@ -1316,15 +1317,15 @@ Y \sim \left\{
 <span id="cb68-3"><a href="#cb68-3"></a>hess</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;           [,1]       [,2]       [,3]
-#&gt; [1,] -907.0910  270.23255  341.24485
-#&gt; [2,]  270.2325 -113.48458  -61.68317
-#&gt; [3,]  341.2448  -61.68317 -192.77401</code></pre>
+#&gt; [1,] -907.1171  270.22741  341.25748
+#&gt; [2,]  270.2274 -113.47763  -61.68148
+#&gt; [3,]  341.2575  -61.68148 -192.78499</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a><span class="co"># 标准差</span></span>
 <span id="cb70-2"><a href="#cb70-2"></a>se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fu">diag</span>(<span class="fu">solve</span>(<span class="sc">-</span>hess)))</span>
 <span id="cb70-3"><a href="#cb70-3"></a>se</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.1946887 0.3500265 0.2504856</code></pre>
+<pre><code>#&gt; [1] 0.1946821 0.3500327 0.2504741</code></pre>
 </div>
 </div>
 <p><code>multiStart</code> 从不同初始值出发寻找全局最大值，先找一系列局部极大值，通过比较获得全局最大值。</p>
@@ -1345,9 +1346,10 @@ Y \sim \left\{
 <span id="cb72-14"><a href="#cb72-14"></a>pmat[<span class="sc">!</span><span class="fu">duplicated</span>(pmat), ]</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;         fvalue parameter 1 parameter 2 parameter 3
-#&gt; [1,] -1999.937      0.5688      2.3056      1.9629
-#&gt; [2,] -1989.946      0.6401      2.6634      1.2561
-#&gt; [3,] -1989.946      0.3599      1.2561      2.6634</code></pre>
+#&gt; [1,] -1989.946      0.6401      2.6634      1.2561
+#&gt; [2,] -1989.946      0.3599      1.2561      2.6634
+#&gt; [3,] -1989.946      0.3598      1.2560      2.6633
+#&gt; [4,] -1999.123      0.6857      2.0010      2.4695</code></pre>
 </div>
 </div>
 </section><section id="sec-maximum-likelihood-estimation" class="level2" data-number="32.5"><h2 data-number="32.5" class="anchored" data-anchor-id="sec-maximum-likelihood-estimation">
