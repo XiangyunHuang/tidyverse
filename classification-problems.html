@@ -999,11 +999,11 @@ SV type: C-svc  (classification)
  parameter : cost C = 1 
 
 Gaussian Radial Basis kernel function. 
- Hyperparameter : sigma =  0.858976346209383 
+ Hyperparameter : sigma =  0.595397443039272 
 
-Number of Support Vectors : 60 
+Number of Support Vectors : 57 
 
-Objective Function Value : -4.6966 -5.2571 -20.1408 
+Objective Function Value : -3.9702 -4.2605 -21.0846 
 Training error : 0.026667 </code></pre>
 </div>
 </div>
@@ -1040,8 +1040,8 @@ iris_pred_svm setosa versicolor virginica
 <pre><code>            iris_species
 iris_knn     setosa versicolor virginica
   setosa         25          0         0
-  versicolor      0         23         4
-  virginica       0          2        21</code></pre>
+  versicolor      0         23         3
+  virginica       0          2        22</code></pre>
 </div>
 </div>
 </section><section id="sec-neural-networks" class="level2" data-number="40.7"><h2 data-number="40.7" class="anchored" data-anchor-id="sec-neural-networks">
@@ -1053,20 +1053,20 @@ iris_knn     setosa versicolor virginica
 <div class="cell-output cell-output-stdout">
 <pre><code>a 4-4-3 network with 35 weights
 options were - softmax modelling 
-  b-&gt;h1  i1-&gt;h1  i2-&gt;h1  i3-&gt;h1  i4-&gt;h1 
- -76.36   15.99  -16.74  -16.93   65.99 
-  b-&gt;h2  i1-&gt;h2  i2-&gt;h2  i3-&gt;h2  i4-&gt;h2 
-  -2.19  -13.75   -8.53   -4.24    0.35 
-  b-&gt;h3  i1-&gt;h3  i2-&gt;h3  i3-&gt;h3  i4-&gt;h3 
- 602.44   59.34   57.73 -190.75 -120.95 
-  b-&gt;h4  i1-&gt;h4  i2-&gt;h4  i3-&gt;h4  i4-&gt;h4 
-   1.67   15.55   31.48  -66.42  -58.35 
-  b-&gt;o1  h1-&gt;o1  h2-&gt;o1  h3-&gt;o1  h4-&gt;o1 
- -17.11  -17.55   13.35   74.72  212.21 
-  b-&gt;o2  h1-&gt;o2  h2-&gt;o2  h3-&gt;o2  h4-&gt;o2 
-   8.40  -50.24   -5.77  219.60 -191.82 
-  b-&gt;o3  h1-&gt;o3  h2-&gt;o3  h3-&gt;o3  h4-&gt;o3 
-   9.34   67.82   -8.17 -295.52  -19.91 </code></pre>
+   b-&gt;h1   i1-&gt;h1   i2-&gt;h1   i3-&gt;h1   i4-&gt;h1 
+   -3.63   -19.41   -11.04   -13.78    -4.15 
+   b-&gt;h2   i1-&gt;h2   i2-&gt;h2   i3-&gt;h2   i4-&gt;h2 
+-1644.60  -117.13  -194.65   449.65   444.60 
+   b-&gt;h3   i1-&gt;h3   i2-&gt;h3   i3-&gt;h3   i4-&gt;h3 
+   -0.02     2.91    -2.31     8.62     2.85 
+   b-&gt;h4   i1-&gt;h4   i2-&gt;h4   i3-&gt;h4   i4-&gt;h4 
+    1.40     1.52     8.73   -18.03    -7.77 
+   b-&gt;o1   h1-&gt;o1   h2-&gt;o1   h3-&gt;o1   h4-&gt;o1 
+   57.11     2.79  -109.78    40.86   217.05 
+   b-&gt;o2   h1-&gt;o2   h2-&gt;o2   h3-&gt;o2   h4-&gt;o2 
+  234.69    -2.27  -474.29   243.14  -210.02 
+   b-&gt;o3   h1-&gt;o3   h2-&gt;o3   h3-&gt;o3   h4-&gt;o3 
+ -292.23    -0.72   583.92  -284.23    -8.12 </code></pre>
 </div>
 </div>
 <p>size 隐藏层中的神经元数量</p>
