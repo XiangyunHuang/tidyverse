@@ -889,7 +889,7 @@ r_t &amp;= \mu + a_t, \quad a_t = \sigma_t \epsilon_t, \quad \epsilon_t \sim \ma
 #&gt; 
 #&gt; Mean and Variance Equation:
 #&gt;  data ~ 1 + garch(2, 0)
-#&gt; &lt;environment: 0x56406c2fe648&gt;
+#&gt; &lt;environment: 0x55e9a0b52d50&gt;
 #&gt;  [data = meituan_log_return]
 #&gt; 
 #&gt; Conditional Distribution:
@@ -916,7 +916,7 @@ r_t &amp;= \mu + a_t, \quad a_t = \sigma_t \epsilon_t, \quad \epsilon_t \sim \ma
 #&gt;  2459.345    normalized:  1.930412 
 #&gt; 
 #&gt; Description:
-#&gt;  Mon Jan 22 07:01:38 2024 by user:  
+#&gt;  Tue Jan 23 07:39:52 2024 by user:  
 #&gt; 
 #&gt; 
 #&gt; Standardised Residuals Tests:
@@ -968,7 +968,7 @@ r_t &amp;= \mu + a_t, \quad a_t = \sigma_t \epsilon_t, \quad \epsilon_t \sim \ma
 #&gt; 
 #&gt; Mean and Variance Equation:
 #&gt;  data ~ 1 + garch(1, 1)
-#&gt; &lt;environment: 0x56406f3574f0&gt;
+#&gt; &lt;environment: 0x55e9a3bb4800&gt;
 #&gt;  [data = meituan_log_return]
 #&gt; 
 #&gt; Conditional Distribution:
@@ -995,7 +995,7 @@ r_t &amp;= \mu + a_t, \quad a_t = \sigma_t \epsilon_t, \quad \epsilon_t \sim \ma
 #&gt;  2478.473    normalized:  1.945427 
 #&gt; 
 #&gt; Description:
-#&gt;  Mon Jan 22 07:01:38 2024 by user:  
+#&gt;  Tue Jan 23 07:39:52 2024 by user:  
 #&gt; 
 #&gt; 
 #&gt; Standardised Residuals Tests:
@@ -1142,11 +1142,11 @@ y = at + b + c \sin(\frac{t}{12} \times 2\pi) + d \cos(\frac{t}{12} \times 2\pi)
 #&gt; 
 #&gt; Model hyperparameters:
 #&gt;                                           mean    sd 0.025quant 0.5quant
-#&gt; Precision for the Gaussian observations 101.38 18.13      69.78    99.99
-#&gt; Precision for ID                        155.13 40.68      92.70   149.32
+#&gt; Precision for the Gaussian observations 101.38 18.14      69.78    99.99
+#&gt; Precision for ID                        155.14 40.69      92.69   149.32
 #&gt;                                         0.975quant   mode
-#&gt; Precision for the Gaussian observations     140.93  97.59
-#&gt; Precision for ID                            251.62 137.50
+#&gt; Precision for the Gaussian observations     140.94  97.59
+#&gt; Precision for ID                            251.66 137.50
 #&gt; 
 #&gt;  is computed</code></pre>
 </div>
@@ -1170,7 +1170,7 @@ y = at + b + c \sin(\frac{t}{12} \times 2\pi) + d \cos(\frac{t}{12} \times 2\pi)
 #&gt; year1952    0.441 0.028      0.386    0.441      0.496 0.441   0
 #&gt; year1953    0.573 0.028      0.517    0.573      0.628 0.573   0
 #&gt; year1954    0.630 0.028      0.575    0.630      0.686 0.630   0
-#&gt; year1955    0.803 0.028      0.748    0.803      0.858 0.803   0
+#&gt; year1955    0.803 0.028      0.748    0.803      0.859 0.803   0
 #&gt; year1956    0.948 0.028      0.893    0.948      1.004 0.948   0
 #&gt; year1957    1.062 0.028      1.007    1.062      1.118 1.062   0
 #&gt; year1958    1.094 0.028      1.039    1.094      1.150 1.094   0
@@ -1179,11 +1179,11 @@ y = at + b + c \sin(\frac{t}{12} \times 2\pi) + d \cos(\frac{t}{12} \times 2\pi)
 #&gt; 
 #&gt; Model hyperparameters:
 #&gt;                                             mean       sd 0.025quant 0.5quant
-#&gt; Precision for the Gaussian observations   213.00    27.46     163.36   211.49
-#&gt; Precision for ID                        42140.41 27700.10   10120.54 35344.93
+#&gt; Precision for the Gaussian observations   213.03    27.48     163.48   211.48
+#&gt; Precision for ID                        42083.84 27558.40   10092.61 35350.04
 #&gt;                                         0.975quant     mode
-#&gt; Precision for the Gaussian observations     271.27   208.97
-#&gt; Precision for ID                         114067.19 24276.98
+#&gt; Precision for the Gaussian observations     271.49   208.80
+#&gt; Precision for ID                         113565.25 24297.77
 #&gt; 
 #&gt;  is computed</code></pre>
 </div>
@@ -1498,7 +1498,7 @@ y = at + b + c \sin(\frac{t}{12} \times 2\pi) + d \cos(\frac{t}{12} \times 2\pi)
 <span id="cb41-10"><a href="#cb41-10"></a><span class="co"># 将测试数据代入模型，计算损失函数和监控度量</span></span>
 <span id="cb41-11"><a href="#cb41-11"></a><span class="fu">evaluate</span>(mod_mlp, test_data[, <span class="fu">c</span>(<span class="st">"x1"</span>, <span class="st">"x2"</span>, <span class="st">"x3"</span>)], test_data[, <span class="st">"y"</span>])</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; 2/2 - 0s - loss: 2517.1836 - mae: 40.8876 - 15ms/epoch - 7ms/step</code></pre>
+<pre><code>#&gt; 2/2 - 0s - loss: 2517.1836 - mae: 40.8876 - 15ms/epoch - 8ms/step</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;       loss        mae 
@@ -1507,7 +1507,7 @@ y = at + b + c \sin(\frac{t}{12} \times 2\pi) + d \cos(\frac{t}{12} \times 2\pi)
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="co"># 测试集上的预测</span></span>
 <span id="cb44-2"><a href="#cb44-2"></a>mlp_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(mod_mlp, test_data[, <span class="fu">c</span>(<span class="st">"x1"</span>, <span class="st">"x2"</span>, <span class="st">"x3"</span>)]) </span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; 2/2 - 0s - 53ms/epoch - 26ms/step</code></pre>
+<pre><code>#&gt; 2/2 - 0s - 52ms/epoch - 26ms/step</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a>mlp_train_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(mod_mlp, train_data[, <span class="fu">c</span>(<span class="st">"x1"</span>, <span class="st">"x2"</span>, <span class="st">"x3"</span>)]) </span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
