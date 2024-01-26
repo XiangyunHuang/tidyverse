@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.547">
+<meta name="generator" content="quarto-1.4.549">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>R 语言数据分析实战 - 40&nbsp; 分类问题</title>
 <style>
@@ -999,11 +999,11 @@ SV type: C-svc  (classification)
  parameter : cost C = 1 
 
 Gaussian Radial Basis kernel function. 
- Hyperparameter : sigma =  0.636633661097277 
+ Hyperparameter : sigma =  0.435507843835137 
 
-Number of Support Vectors : 59 
+Number of Support Vectors : 56 
 
-Objective Function Value : -4.0771 -4.4203 -20.8874 
+Objective Function Value : -3.6 -3.6427 -22.1321 
 Training error : 0.026667 </code></pre>
 </div>
 </div>
@@ -1040,8 +1040,8 @@ iris_pred_svm setosa versicolor virginica
 <pre><code>            iris_species
 iris_knn     setosa versicolor virginica
   setosa         25          0         0
-  versicolor      0         23         4
-  virginica       0          2        21</code></pre>
+  versicolor      0         23         3
+  virginica       0          2        22</code></pre>
 </div>
 </div>
 </section><section id="sec-neural-networks" class="level2" data-number="40.7"><h2 data-number="40.7" class="anchored" data-anchor-id="sec-neural-networks">
@@ -1053,20 +1053,20 @@ iris_knn     setosa versicolor virginica
 <div class="cell-output cell-output-stdout">
 <pre><code>a 4-4-3 network with 35 weights
 options were - softmax modelling 
-   b-&gt;h1   i1-&gt;h1   i2-&gt;h1   i3-&gt;h1   i4-&gt;h1 
-    4.05    13.69    84.08   -70.26   -64.61 
-   b-&gt;h2   i1-&gt;h2   i2-&gt;h2   i3-&gt;h2   i4-&gt;h2 
- 1779.71   553.18   462.35 -1095.75  -702.50 
-   b-&gt;h3   i1-&gt;h3   i2-&gt;h3   i3-&gt;h3   i4-&gt;h3 
-  -24.41  -118.23   -86.46   -25.96    -2.84 
-   b-&gt;h4   i1-&gt;h4   i2-&gt;h4   i3-&gt;h4   i4-&gt;h4 
-   23.46   141.93    76.85   104.29    40.83 
-   b-&gt;o1   h1-&gt;o1   h2-&gt;o1   h3-&gt;o1   h4-&gt;o1 
- -341.01   318.18   241.68   260.69    70.44 
-   b-&gt;o2   h1-&gt;o2   h2-&gt;o2   h3-&gt;o2   h4-&gt;o2 
-  321.57  -107.87   237.86  -112.45  -187.49 
-   b-&gt;o3   h1-&gt;o3   h2-&gt;o3   h3-&gt;o3   h4-&gt;o3 
-   20.41  -210.23  -479.81  -147.55   117.58 </code></pre>
+  b-&gt;h1  i1-&gt;h1  i2-&gt;h1  i3-&gt;h1  i4-&gt;h1 
+  -2.65   -6.46  -14.33   20.49   11.00 
+  b-&gt;h2  i1-&gt;h2  i2-&gt;h2  i3-&gt;h2  i4-&gt;h2 
+   0.31   -3.20    1.63   -8.54   -3.85 
+  b-&gt;h3  i1-&gt;h3  i2-&gt;h3  i3-&gt;h3  i4-&gt;h3 
+ 323.75   87.53   64.23 -183.62  -91.49 
+  b-&gt;h4  i1-&gt;h4  i2-&gt;h4  i3-&gt;h4  i4-&gt;h4 
+ 460.45   27.60  251.52  -46.90 -656.69 
+  b-&gt;o1  h1-&gt;o1  h2-&gt;o1  h3-&gt;o1  h4-&gt;o1 
+  80.24 -207.12    2.44   93.76    1.51 
+  b-&gt;o2  h1-&gt;o2  h2-&gt;o2  h3-&gt;o2  h4-&gt;o2 
+-144.98  142.21    0.32   52.06   64.90 
+  b-&gt;o3  h1-&gt;o3  h2-&gt;o3  h3-&gt;o3  h4-&gt;o3 
+  65.27   64.77   -3.84 -146.39  -66.52 </code></pre>
 </div>
 </div>
 <p>size 隐藏层中的神经元数量</p>
@@ -1198,12 +1198,12 @@ Call:
                      Number of trees: 500
 No. of variables tried at each split: 2
 
-        OOB estimate of  error rate: 4%
+        OOB estimate of  error rate: 4.67%
 Confusion matrix:
            setosa versicolor virginica class.error
 setosa         50          0         0        0.00
 versicolor      0         47         3        0.06
-virginica       0          3        47        0.06</code></pre>
+virginica       0          4        46        0.08</code></pre>
 </div>
 </div>
 <div class="cell">
