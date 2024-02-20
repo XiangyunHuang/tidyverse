@@ -677,7 +677,7 @@ window.Quarto = {
 </ol>
 </div>
 </div>
-<p>本章介绍五类典型的优化问题及 R 语言求解过程，按从易到难的顺序分别是线性优化、凸二次优化、凸锥优化、非线性优化、整数优化。学习完本章内容，读者可以灵活运用各类软件工具包解决各类标准优化问题。本章内容不涉及优化算法理论，对理论感兴趣的读者可以寻着 R 包参考文献或者相关书籍进一步学习。</p>
+<p>本章介绍五类典型的优化问题及 R 语言求解过程，按从易到难的顺序分别是线性优化、凸二次优化、凸锥优化、非线性优化、整数优化。学习完本章内容，读者可以灵活运用各类软件工具包解决各类标准优化问题。本章内容不涉及优化算法理论，对理论感兴趣的读者可以寻着 R 包参考文献或者相关书籍<span class="citation" data-cites="wen2020">(<a href="references.html#ref-wen2020" role="doc-biblioref">刘浩洋 等 2020</a>)</span>进一步学习。</p>
 <p>除了 R 软件内置一些数值优化求解器，R 语言社区还有大量数值优化方面的函数和 R 包。特别是 <strong>ROI</strong> 包 <span class="citation" data-cites="ROI2020">(<a href="references.html#ref-ROI2020" role="doc-biblioref">Theußl, Schwendinger, 和 Hornik 2020</a>)</span>，它通过插件包对 20 多个 R 包提供统一的函数调用方式，相当于一个运筹优化方面的基础设施平台，极大地方便学习和使用。</p>
 <div class="cell" data-fig-width="6.5" data-layout-align="default">
 <div class="cell-output-display">
@@ -2358,14 +2358,15 @@ b = \begin{bmatrix}
 <span id="cb114-2"><a href="#cb114-2"></a><span class="co"># 目标函数值</span></span>
 <span id="cb114-3"><a href="#cb114-3"></a>nlp<span class="sc">$</span>objval</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 368.1059</code></pre>
+<pre><code>#&gt; [1] 368.1061</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb116"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1"></a><span class="co"># 最优解</span></span>
 <span id="cb116-2"><a href="#cb116-2"></a>nlp<span class="sc">$</span>solution</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt;  [1] 2.00000 2.00000 2.00000 2.00000 2.00000 2.00000 2.00000 2.00000 2.00000
-#&gt; [10] 2.00000 2.00000 2.00000 2.00000 2.00000 2.00000 2.00000 2.00000 2.00000
-#&gt; [19] 2.00000 2.00000 2.00000 2.00000 2.00000 2.10913 4.00000</code></pre>
+<pre><code>#&gt;  [1] 2.000000 2.000000 2.000000 2.000000 2.000000 2.000000 2.000000 2.000000
+#&gt;  [9] 2.000000 2.000000 2.000000 2.000000 2.000000 2.000000 2.000000 2.000000
+#&gt; [17] 2.000000 2.000000 2.000000 2.000000 2.000000 2.000000 2.000000 2.109093
+#&gt; [25] 4.000000</code></pre>
 </div>
 </div>
 </section></section><section id="sec-linearly-constrained-optimization" class="level3" data-number="31.4.5"><h3 data-number="31.4.5" class="anchored" data-anchor-id="sec-linearly-constrained-optimization">
@@ -2718,11 +2719,11 @@ b = \begin{bmatrix}
 <div class="sourceCode cell-code" id="cb145"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb145-1"><a href="#cb145-1"></a>nlp <span class="ot">&lt;-</span> <span class="fu">ROI_solve</span>(op, <span class="at">solver =</span> <span class="st">"nloptr.isres"</span>, <span class="at">start =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">1</span>))</span>
 <span id="cb145-2"><a href="#cb145-2"></a>nlp<span class="sc">$</span>solution</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 1.024463 4.822160 3.705912 1.400760</code></pre>
+<pre><code>#&gt; [1] 1.102964 4.899129 3.623060 1.291496</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb147"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb147-1"><a href="#cb147-1"></a>nlp<span class="sc">$</span>objval</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 17.41406</code></pre>
+<pre><code>#&gt; [1] 17.33383</code></pre>
 </div>
 </div>
 <p>可以看出，<strong>nloptr</strong> 提供的优化能力可以覆盖 <a href="https://github.com/coin-or/Ipopt">Ipopt 求解器</a>，从以上求解的情况来看，推荐使用 <code>nloptr.slsqp</code> 求解器，这也是 Octave 的选择。</p>
@@ -3454,6 +3455,9 @@ Theussl, Stefan, 和 Kurt Hornik. 2023. <em><span>Rglpk</span>: R/GNU Linear Pro
 </div>
 <div id="ref-ROI2020" class="csl-entry" role="listitem">
 Theußl, Stefan, Florian Schwendinger, 和 Kurt Hornik. 2020. <span>《<span>ROI</span>: An Extensible <span>R</span> Optimization Infrastructure》</span>. <em>Journal of Statistical Software</em> 94 (15): 1–64. <a href="https://doi.org/10.18637/jss.v094.i15">https://doi.org/10.18637/jss.v094.i15</a>.
+</div>
+<div id="ref-wen2020" class="csl-entry" role="listitem">
+刘浩洋, 户将, 李勇锋, 和 文再文. 2020. <em>最优化：建模、算法与理论</em>. 北京: 高等教育出版社. <a href="http://faculty.bicmr.pku.edu.cn/~wenzw/optbook.html">http://faculty.bicmr.pku.edu.cn/~wenzw/optbook.html</a>.
 </div>
 </div>
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
