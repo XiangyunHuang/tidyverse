@@ -1301,32 +1301,34 @@ M = L^{\top}L
 <span id="cb42-2"><a href="#cb42-2"></a><span class="fu">print</span>(fit_logit_normal_loo)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
-#&gt; Computed from 2000 by 2500 log-likelihood matrix
+#&gt; Computed from 2000 by 2500 log-likelihood matrix.
 #&gt; 
 #&gt;          Estimate   SE
 #&gt; elpd_loo   -762.2 27.3
 #&gt; p_loo        11.2  0.5
 #&gt; looic      1524.4 54.5
 #&gt; ------
-#&gt; Monte Carlo SE of elpd_loo is 0.1.
+#&gt; MCSE of elpd_loo is 0.1.
+#&gt; MCSE and ESS estimates assume MCMC draws (r_eff in [0.9, 2.4]).
 #&gt; 
-#&gt; All Pareto k estimates are good (k &lt; 0.5).
+#&gt; All Pareto k estimates are good (k &lt; 0.7).
 #&gt; See help('pareto-k-diagnostic') for details.</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a>fit_logit_lasso_loo <span class="ot">&lt;-</span> fit_logit_lasso<span class="sc">$</span><span class="fu">loo</span>(<span class="at">variables =</span> <span class="st">"log_lik"</span>, <span class="at">cores =</span> <span class="dv">1</span>)</span>
 <span id="cb44-2"><a href="#cb44-2"></a><span class="fu">print</span>(fit_logit_lasso_loo)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
-#&gt; Computed from 2000 by 2500 log-likelihood matrix
+#&gt; Computed from 2000 by 2500 log-likelihood matrix.
 #&gt; 
 #&gt;          Estimate   SE
 #&gt; elpd_loo   -761.6 26.8
 #&gt; p_loo        10.5  0.5
 #&gt; looic      1523.3 53.7
 #&gt; ------
-#&gt; Monte Carlo SE of elpd_loo is 0.1.
+#&gt; MCSE of elpd_loo is 0.1.
+#&gt; MCSE and ESS estimates assume MCMC draws (r_eff in [0.9, 2.3]).
 #&gt; 
-#&gt; All Pareto k estimates are good (k &lt; 0.5).
+#&gt; All Pareto k estimates are good (k &lt; 0.7).
 #&gt; See help('pareto-k-diagnostic') for details.</code></pre>
 </div>
 </div>
@@ -1424,16 +1426,17 @@ M = L^{\top}L
 <span id="cb51-2"><a href="#cb51-2"></a><span class="fu">print</span>(fit_logit_horseshoe_loo)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
-#&gt; Computed from 2000 by 2500 log-likelihood matrix
+#&gt; Computed from 2000 by 2500 log-likelihood matrix.
 #&gt; 
 #&gt;          Estimate   SE
 #&gt; elpd_loo   -760.1 26.5
 #&gt; p_loo         7.7  0.4
 #&gt; looic      1520.2 53.0
 #&gt; ------
-#&gt; Monte Carlo SE of elpd_loo is 0.1.
+#&gt; MCSE of elpd_loo is 0.1.
+#&gt; MCSE and ESS estimates assume MCMC draws (r_eff in [0.4, 1.1]).
 #&gt; 
-#&gt; All Pareto k estimates are good (k &lt; 0.5).
+#&gt; All Pareto k estimates are good (k &lt; 0.7).
 #&gt; See help('pareto-k-diagnostic') for details.</code></pre>
 </div>
 </div>
@@ -1706,7 +1709,7 @@ M = L^{\top}L
 <span id="cb69-7"><a href="#cb69-7"></a>  <span class="at">seed =</span> <span class="dv">20232023</span> <span class="co"># 随机数种子</span></span>
 <span id="cb69-8"><a href="#cb69-8"></a>)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; Finished in  1.7 seconds.</code></pre>
+<pre><code>#&gt; Finished in  1.6 seconds.</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a>fit_pathfinder_logit<span class="sc">$</span><span class="fu">summary</span>(<span class="fu">c</span>(<span class="st">"alpha"</span>, <span class="st">"beta"</span>, <span class="st">"lambda"</span>, <span class="st">"lp__"</span>))</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
